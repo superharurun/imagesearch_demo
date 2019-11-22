@@ -3,13 +3,13 @@
 # Directory structure　ディレクトリ構成　============
 
 
-app.py        <---　AccessDataSetting内のアクセスID,アクセスPASSはご用意ください  
+app.py<--- AccessDataSetting内のアクセスID,アクセスPASSはご用意ください  
 static  
- L bootstrap.css  
-   bootstrap.min.css  
-   sbc.jpg    <---　sbcログの為、別途オリジナルの画像を用意ください  
+ 　L bootstrap.css  
+   　bootstrap.min.css  
+   　sbc.jpg<--- sbcログの為、別途オリジナルの画像を用意ください  
 templates  
- L bootstrap.html  
+ 　L bootstrap.html  
 
 
 # Necessary tools　今回使用したtool　===============  
