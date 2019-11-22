@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+
+  <title>ImageSearchデモツール</title>
+
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+  <style type="text/css">
+
+  .bs-component + .bs-component {
+    margin-top: 1rem;
+  }
+  @media (min-width: 768px) {
+    .bs-docs-section {
+      margin-top: 8em;
+    }
+    .bs-component {
+      position: relative;
+    }
+    .bs-component .modal {
+      position: relative;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      z-index: 1;
+      display: block;
+    }
+    .bs-component .modal-dialog {
+      width: 90%;
+    }
+    .bs-component .popover {
+      position: relative;
+      display: inline-block;
+      width: 220px;
+      margin: 20px;
+    }
+    .nav-tabs {
+      margin-bottom: 15px;
+    }
+    .progress {
+      margin-bottom: 10px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<!-- ヘッダー作る（ロゴ部分）
+================================================== -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="./">
+        <img src="/static/css/sbc.jpg" width="200" height="30" class="d-inline-block align-top mr-1" alt="SBCloud">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./">Top <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="page-header" id="banner">
+    <div class="row my-4">
+      <div class="col-12">
+        <h2>ImageSearchデモツール</h2>
+        <p class="lead">ImageSearchのAPIを利用して、取り込んだ画像から類似商品を出力します。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ファイルをインポートする
+  ================================================== -->
+  <section class="bs-docs-section clearfix">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-header">
+          <h1 id="navbars"></h1>
+          <div class="form-group">
+            <form method="post" action="" enctype="multipart/form-data">
+              <label for="exampleInputFile"><h3>File input</h3></label>
+          <input type="file" id="img_file" name="img_file" class="col-sm-4" accept=".jpg, .jpeg, .png">  
+          </div>
+        </div>
+          <label for="exampleSelect1"><h4>カテゴリ選択</h4></label>
+          <select class="form-control"  id="categoly" name="categoly">
+           <option value="88888888" sekected>カップ</option>
+           <option value="3">バッグ</option>
+           <option value="4">靴</option>
+          </select><br>
+          <input value="検索" type="submit" class="btn btn-secondary"></button>
+        </form>
+      </div>
+    </div>
+    <br><br>
+  </section>
+
+    <!-- 検索結果返す
+  ================================================== -->
+
+  <div class="row">
+      <div class="col-lg-4">
+        <div class="bs-component">
+          <div class="card border-info mb-3" style="max-width: 20rem;">
+            <div class="card-header"><h4>被写体</h4></div>
+            <div class="card-body">
+              <p><img src="{{ img_url0 }}" width="270" height="200"></p>
+              </div>
+              </div>
+   
+        <div class="bs-component">
+          <div class="card border-info mb-3" style="max-width: 20rem;">
+            <div class="card-header"><h4>検索結果  1位</h4></div>
+            <div class="card-body">
+              <p><img src="{{ img_url1 }}" width="270" height="200"></p>
+            </div>
+            </div>
+
+          <div class="bs-component">
+          <div class="card border-info mb-3" style="max-width: 20rem;">
+          <div class="card-header"><h4>検索結果  2位</h4></div>
+
+
+          <div class="card-body">
+          <p><img src="{{ img_url2 }}" width="270" height="200"></p>
+          </div>
+          </div>
+          
+          <div class="bs-component">
+          <div class="card border-info mb-3" style="max-width: 20rem;">
+          <div class="card-header"><h4>検索結果  3位</h4></div>
+          <div class="card-body">
+          <p><img src="{{ img_url3 }}" width="270" height="200"></p>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    <h4>ImageSearchからの応答値</h4>
+    <p>{{result}}</p>
+  </div>
+
