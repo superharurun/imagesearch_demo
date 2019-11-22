@@ -1,13 +1,13 @@
-# imagesearch_demo
+# imagesearch_demo  
 
 # Directory structure　ディレクトリ構成　============
 
 
-app.py<--- AccessDataSetting内のアクセスID,アクセスPASSはご用意ください  
+app.py <--- AccessDataSetting内のアクセスID,アクセスPASSはご用意ください  
 static  
  　L bootstrap.css  
    　bootstrap.min.css  
-   　sbc.jpg<--- sbcログの為、別途オリジナルの画像を用意ください  
+   　sbc.jpg <--- sbcログの為、別途オリジナルの画像を用意ください  
 templates  
  　L bootstrap.html  
 
@@ -20,7 +20,7 @@ templates
     aliyun-python-sdk-core-v3 2.13.0  
     aliyun-python-sdk-imagesearch 1.0.1　
 
-# how to use  サーバ上でのアプリ起動　==================
+# How to use  サーバ上でのアプリ起動　==================
 
 you start-up app.py when you use this application.
 
